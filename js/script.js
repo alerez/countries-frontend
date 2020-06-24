@@ -123,7 +123,7 @@ function removeHeart(){
 			document.getElementById('pic1').remove();
 		}
 		if(hearts < 1){
-			saveAndMove(max_score, "over.html");
+			saveAndMove(max_score, "game_over.html");
 		}
 }
 
@@ -146,10 +146,10 @@ function main() {
 	if (next) {
 		removeOne(userInput, countriesNames);
 		botOutput = findNew(userInput.slice(-1));
-		if(botOutput === null) {
+		console.log('Output', botOutput);
+		if(botOutput === null || botOutput === undefined) {
 			saveAndMove(max_score, "over.html");
 		}
-		console.log('botOutput', botOutput);
 		fill(userInput, '#5869db');
 		fill(botOutput, '#5869db');
 		document.getElementById('out').innerText = botOutput.charAt(0).toUpperCase() + botOutput.slice(1);
