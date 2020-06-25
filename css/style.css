@@ -3,16 +3,18 @@
 	src: url("../assets/8-bit_wo-webfont.woff") format("woff"),
 	url("../assets/8-bit_wo-webfont.ttf") format("opentype");
 }
-
+@font-face {
+	font-family: '8BIT';
+	src: url("../assets/cyrillic_pixel-7.ttf") format("cyril");
+}
 body{
-    background-color: rgb(205, 204, 62);
+    background-image: url("https://lh3.googleusercontent.com/proxy/ck1z1zFutVPZCfTdg-qIpmftK6CaPIwqDANKuYRTg1wjLWKQj7UKGphr2EecU284OEnk_uf4Pvt7e1H-Lu09hf-HuanOMfoP");
 	font-family: '8BITWONDERNominal', sans-serif;
 }
-/*Стили для карты мира*/
 
 .worldmap{
-	fill: #474747;
-	stroke: black;
+	fill: rgba(0, 0, 0, 0.99);
+	stroke: #fffbfd;
 	stroke-width: 1px;
 }
 #place{
@@ -28,7 +30,10 @@ body{
 
 
 #timer_inp{
-
+	position: absolute;
+	font-size: 36px;
+	margin-left: 20px;
+	margin-top: -1px;
 }
 
 
@@ -37,11 +42,14 @@ body{
 
 
 .score{
-
+	display: flex;
+	flex-direction: row;
 }
 
 #score{
-
+	margin-top: -3px;
+	margin-left: 10px;
+	margin-bottom: -60px;
 }
 #charr{
 	height: 120px;
@@ -64,6 +72,8 @@ body{
 	padding: 5px;
 
 	margin: 30px auto 20px;
+
+	font-family: '8BIT', sans-serif;
 }
 #galochka{
 	margin: 0 auto;
@@ -106,5 +116,8 @@ button {
 	border-bottom-left-radius: 25px;
 	border-top-right-radius: 20px;
 	margin-left: -100px;
-	margin-bottom: -40px;
+	margin-bottom: -20px;
+
+	text-align: center;
+	padding-top: 8px;
 }
