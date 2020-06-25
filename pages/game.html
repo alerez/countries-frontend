@@ -14,40 +14,42 @@
 		<header>
 			<h3 id="timer_inp"></h3>
 			<div id="global-map"></div>
+			<div class="headerMap">
 				<div id="place"></div>
 					<script type="text/javascript">
 						/* Country click handler */
 						jQuery(document).ready(function(){
 							jQuery('#place').SVGWorldMap({
-								bottom:20, /* Bottom padding (removes antarctica from map) */
-								clickhandler :'', /* Click handler function name */
+								bottom: 20, /* Bottom padding (removes antarctica from map) */
+								clickhandler: '', /* Click handler function name */
 								c : {} /* Country classes */
-								});
-
 							});
-				</script>
+						});
+					</script>
+				<div id="charr">
+					<div class="score">
+						<h2 >SCORE:<span><h3 id="score"></h3></span></h2>
+					</div>
+					<div class="heart">
+						<img id="pic1" class="pic" width="40px" src="../assets/img/pixel-heart.png">
+						<img id="pic2" class="pic" width="40px" src="../assets/img/pixel-heart.png">
+						<img id="pic3" class="pic" width="40px" src="../assets/img/pixel-heart.png">
+					</div>
+				</div>
+				<div id="botOtvet">
+					<p id="out"></p>
+					<img src="../assets/img/robot.gif" alt="Анимация робота" width="250px" height="200px" id="robot">
+				</div>
 			</div>
 		</header>
 		<main>
-			<div id="charr">
-				<form id="from">
-					<input autocomplete="off" tabindex="1" type="text" onkeypress="enter(event); document.getElementById('inp').focus();" placeholder="Введи країну будь ласка..." id="inp" autofocus>
-					<button type="button" onclick="main()"><span id="galochka"><i>&gt;</i></span></button>
-				</form>
-				<div class="score">
-					<h2 >SCORE:<span><h3 id="score"></h3></span></h2>
-				</div>
-				<div class="heart">
-					<img id="pic1" class="pic" width="50px" src="../assets/img/pixel-heart.png">
-					<img id="pic2" class="pic" width="50px" src="../assets/img/pixel-heart.png">
-					<img id="pic3" class="pic" width="50px" src="../assets/img/pixel-heart.png">
-				</div>
-				<div id="botOtvet">
-					<img src="../assets/img/robot.gif" alt="Анимация робота" width="250px" height="200px" id="robot">
-					<p id="out"></p>
-				</div>
-			</div>
+		<div>
+			<form id="from">
+				<input autocomplete="off" tabindex="1" type="text" onkeypress="enter(event); document.getElementById('inp').focus();" placeholder="Введи країну будь ласка..." id="inp" autofocus>
+				<button id="galochka" type="button" onclick="main()">ОТВЕТИТЬ</button>
+			</form>
+		</div>
+
 		</main>
-		<script text="text/javascript" src="../js/script.js"></script>
 	</body>
 </html>
