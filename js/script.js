@@ -150,8 +150,8 @@ function main() {
 		if(botOutput === null || botOutput === undefined) {
 			saveAndMove(max_score, "over.html");
 		}
-		fill(userInput, '#5869db');
-		fill(botOutput, '#5869db');
+		fill(userInput, '#fffbfd');
+		fill(botOutput, '#fffbfd');
 		document.getElementById('out').innerText = botOutput.charAt(0).toUpperCase() + botOutput.slice(1);
 		if (removeOne(botOutput, countriesNames)) {
 			max_score = max_score + 100;
